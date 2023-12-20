@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block head %}
+    <h1> Please fill the form below to login. </h1>
+{% endblock %}
+{% block body %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Login">
+    </form>
+    {% for msg in messages %}
+        <h1>{{msg}}</h1>
+    {% endfor %}    
+{% endblock %} 

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    register
+{% endblock %}
+{% block head %}
+    <h1>Register Here.</h1>
+    <a href=http://127.0.0.1:8000/users/>
+        <h3>Show all fake users</h3>
+    </a>
+{% endblock %}
+{% block body %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Register">
+</form>
+{% endblock%}    

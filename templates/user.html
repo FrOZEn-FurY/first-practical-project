@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>
+        {{info.firstname}}
+    </title>
+    <a href='delete'>
+        <button type="button" class="btn btn-outline-danger">Delete</button>
+    </a>
+    <a href='update'>
+        <button type="button" class="btn btn-outline-info">Update</button>
+    </a>
+    <body>
+        <hr/>
+        <h1>First Name : {{info.firstname}}</h1>
+        <h1>Last Name : {{info.lastname}}</h1>
+        <h3>Email Address : {{info.email}}</h3>
+        {% for msg in messages %}
+            <h2>{{msg}}</h2>
+        {% endfor %}    
+    </body>    
+</html>
